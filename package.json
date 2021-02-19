@@ -1,0 +1,29 @@
+{
+  "name": "itgenio-srv-resolver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/main.js",
+    "watch": "esbuild src/index.ts --outfile=dist/main.js --bundle --platform=node --watch",
+    "tsc": "tsc --noEmit --skipLibCheck",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afrokick/itgenio-srv-resolver.git"
+  },
+  "author": "Alex So",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afrokick/itgenio-srv-resolver/issues"
+  },
+  "homepage": "https://github.com/afrokick/itgenio-srv-resolver#readme",
+  "devDependencies": {
+    "esbuild": "^0.8.48",
+    "typescript": "^4.1.5"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}
