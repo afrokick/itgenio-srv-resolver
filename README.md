@@ -2,7 +2,7 @@
 
 Receive info about SRV records.
 
-The package uses TypeScript and esbuild.
+The package uses TypeScript and esbuild. NodeJS 12+
 
 ## How to build
 
@@ -31,4 +31,14 @@ services:
       - 5000:5000
     environment:
       SRV_RECORD: "_mongodb._tcp.db.example.com"
+```
+
+## Config
+You can provide configuration via env. variables:
+```typescript
+SRV_RECORD: string; // required
+TIMEOUT: number = 2500; //ms, socket's timeout
+PING_INTERVAL: number = 3000; //ms, ping srv services every X ms
+RESOLVER_SERVER: string = '8.8.8.8'; // resolver server ip
+HTTP_PORT: number = 5000; // http api port
 ```
