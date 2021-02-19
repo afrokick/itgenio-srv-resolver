@@ -33,6 +33,26 @@ services:
       SRV_RECORD: "_mongodb._tcp.db.example.com"
 ```
 
+## HTTP API
+
+Do a GET request to any path. The response object should contains:
+```json
+{
+  "servers": [
+    { 
+      "name": "db1.example.com",
+      "port": 27017,
+      "ping": 45
+    },
+    { 
+      "name": "db2.example.com",
+      "port": 27017,
+      "error": "Some error"
+    }
+  ]
+}
+```
+
 ## Config
 You can provide configuration via env. variables:
 ```typescript
